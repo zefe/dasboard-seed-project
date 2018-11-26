@@ -16,18 +16,20 @@ class App extends Component {
 		})
 	};
 
+	backdropClickHandler = () => {
+		this.setState({sideDrawerOpen: false});
+	}
+
 	render() {
-		let sideDrawer;
 		let backdrop;
 
 		if (this.state.sideDrawerOpen) {
-			sideDrawer = <SideDrawer />;
-			backdrop = <BackDrop />;
+			backdrop = <BackDrop click={this.backdropClickHandler} />;
 		}
 		return (
-			<div style={{height: '100%'}}>
+			<div className="wrapper">
 				<Header drawerClickHandler={this.drawerToggleClickHandler} />
-				{sideDrawer}
+				<SideDrawer show={this.state.sideDrawerOpen} />
 				{backdrop}
 				<main style={{marginTop: '64px'}}>
 					<p>Welcome to Dashboard</p>

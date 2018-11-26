@@ -48,3 +48,15 @@
 .toolbar_navigation-items a:active {
     color: orange;
 }
+
+/* @media (max-width: 768px) {
+    .toolbar_navigation-items {
+        background:  yellowgreen;
+    }
+}
+
+@media (min-width: 769px){
+    .toolbar__toggle-button {
+        display: none;
+    }
+} */
