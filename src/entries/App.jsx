@@ -28,8 +28,8 @@ class App extends Component {
 		}
 		return (
 			<div className="wrapper">
-				<Header drawerClickHandler={this.drawerToggleClickHandler} />
 				<SideDrawer show={this.state.sideDrawerOpen} />
+				<Header drawerClickHandler={this.drawerToggleClickHandler} />
 				{backdrop}
 				<main style={{marginTop: '64px'}}>
 					<p>Welcome to Dashboard</p>
